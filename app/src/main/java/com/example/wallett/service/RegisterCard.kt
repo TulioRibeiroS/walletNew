@@ -18,8 +18,6 @@ import java.util.UUID
 
 class RegisterCard : AppCompatActivity() {
 
-    private lateinit var config: RetroConfig
-
     private var service: CardController? = null
 
     companion object {
@@ -36,11 +34,10 @@ class RegisterCard : AppCompatActivity() {
             executarRequest(Card(
                 id = UUID.randomUUID().toString(),
                 name = findViewById<EditText>(R.id.campoNomeTitular).text.toString(),
-                cvv = findViewById<EditText>(R.id.campoCVV).toString(),
-                expirationDate = findViewById<EditText>(R.id.campoVencimento).toString(),
+                cvv = findViewById<EditText>(R.id.campoCVV).text.toString(),
+                expirationDate = findViewById<EditText>(R.id.campoVencimento).text.toString(),
                 cardType = "GREEN",
                 number = findViewById<EditText>(R.id.campoNumeroCartao).text.toString()
-
             ))
         }
         findViewById<Button>(R.id.btVoltar).setOnClickListener {

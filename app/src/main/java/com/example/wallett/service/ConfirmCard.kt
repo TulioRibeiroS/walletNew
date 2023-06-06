@@ -1,10 +1,10 @@
 package com.example.wallett.service
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.wallett.MainActivity
 import com.example.wallett.R
 import com.example.wallett.config.RetroConfig
@@ -27,14 +27,15 @@ class ConfirmCard : AppCompatActivity() {
             RetroConfig().cardController.findByid(it).enqueue(object: Callback<Card>{
                 override fun onResponse(call: Call<Card>, response: Response<Card>) {
                     val card = response.body()
-                    findViewById<TextView>(R.id.tvnameTitular).text = card?.name
-                    findViewById<TextView>(R.id.tvnumberCard).text = card?.number
-                    findViewById<TextView>(R.id.Vencimento).text = card?.expirationDate
-                    findViewById<TextView>(R.id.cvv).text = card?.cvv
+                    findViewById<TextView>(R.id.campoNomeTitular).text = card?.name
+                    findViewById<TextView>(R.id.campoNumeroCartao).text = card?.number
+                    findViewById<TextView>(R.id.vencimento).text = card?.expirationDate
+                    findViewById<TextView>(R.id.campoCVV).text = card?.cvv
                     findViewById<TextView>(R.id.tvColorcard).text = card?.cardType
                 }
 
                 override fun onFailure(call: Call<Card>, t: Throwable) {
+                    System.out.println("ERRO MEU PARCIERO")
                 }
             })
         }

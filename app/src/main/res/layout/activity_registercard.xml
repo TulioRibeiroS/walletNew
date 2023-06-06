@@ -41,7 +41,7 @@
         android:background="@color/white"
         android:ems="10"
         android:hint="0000 0000 0000 0000"
-        android:inputType="text"
+        android:inputType="number"
         android:padding="20dp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@id/NomeTitular"
@@ -82,15 +82,16 @@
         app:layout_constraintTop_toBottomOf="@id/NomeTitular" />
 
     <TextView
-        android:id="@+id/Vencimento"
+        android:id="@+id/tvCampoVencimento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vencimento:"
         android:textColor="@color/white"
         android:textSize="18dp"
-        app:layout_constraintEnd_toStartOf="@id/cvv"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/campoVencimento"
+        app:layout_constraintEnd_toStartOf="@id/campoCVV"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campoNomeTitular" />
 
     <EditText
@@ -103,18 +104,19 @@
         android:ems="10"
         android:inputType="text"
         android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btAvancar"
         app:layout_constraintEnd_toStartOf="@id/campoCVV"
-        app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/Vencimento" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/cvv"
+        android:id="@+id/tvCampoCVV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="cvv"
         android:textColor="@color/white"
         android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/campoCVV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/campoCVV"
         app:layout_constraintTop_toBottomOf="@+id/campoNomeTitular" />
@@ -127,11 +129,11 @@
         android:layout_marginStart="8dp"
         android:background="@color/white"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="number"
         android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/btAvancar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/campoVencimento"
-        app:layout_constraintTop_toBottomOf="@+id/cvv" />
+        app:layout_constraintStart_toEndOf="@id/campoVencimento" />
 
     <Button
         android:id="@+id/btAvancar"

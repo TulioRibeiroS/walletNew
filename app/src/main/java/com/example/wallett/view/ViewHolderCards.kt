@@ -18,10 +18,10 @@ class ViewHolderCards(itemView:View): RecyclerView.ViewHolder(itemView) {
 
     init {
         clContainer = itemView.findViewById(R.id.clContainer)
-        tvNamecard = itemView.findViewById(R.id.tvnameTitular)
-        tvcardNumber= itemView.findViewById(R.id.tvnumberCard)
-        tvVenci = itemView.findViewById(R.id.Vencimento)
-        tvCodseg = itemView.findViewById(R.id.cvv)
+        tvNamecard = itemView.findViewById(R.id.campoNomeTitular)
+        tvcardNumber= itemView.findViewById(R.id.campoNumeroCartao)
+        tvVenci = itemView.findViewById(R.id.vencimento)
+        tvCodseg = itemView.findViewById(R.id.campoCVV)
         tvcolorCard = itemView.findViewById(R.id.tvColorcard)
     }
 

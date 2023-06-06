@@ -12,8 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/card_item"
+        tools:layout_editor_absoluteX="9dp"
 
-        />
+        tools:layout_editor_absoluteY="9dp"
+        tools:listitem="@layout/card_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

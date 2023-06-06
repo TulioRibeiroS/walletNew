@@ -38,16 +38,16 @@
         >
 
         <TextView
-            android:id="@+id/tvnameTitular"
+            android:id="@+id/campoNomeTitular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textColor="@color/white"
+            android:text="Name:"
+            android:textColor="@color/black"
             android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/vencimento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/Vencimento"
 
             >
 
@@ -55,47 +55,45 @@
 
 
         <TextView
-            android:id="@+id/tvnumberCard"
+            android:id="@+id/campoNumeroCartao"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="Numero:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/vencimento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/campoNomeTitular">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/vencimento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Vencimento:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@id/campoNumeroCartao"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvnameTitular"
-            app:layout_constraintBottom_toTopOf="@id/Vencimento"
-            android:text="Number"
-            android:textSize="20dp"
-            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/campoCVV"
             >
 
         </TextView>
 
         <TextView
-            android:id="@+id/Vencimento"
+            android:id="@+id/campoCVV"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Vencimento"
-            android:textColor="@color/white"
+            android:text="CVV"
+            android:textColor="@color/black"
             android:textSize="20dp"
-            app:layout_constraintTop_toBottomOf="@id/tvnumberCard"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/cvv"
-            >
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/cvv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Codigo de Segurança"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintTop_toBottomOf="@id/Vencimento"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/tvColorcard"
-            >
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vencimento">
 
         </TextView>
 
@@ -104,12 +102,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Cor do cartão"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp"
-            app:layout_constraintTop_toBottomOf="@id/cvv"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            >
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/campoCVV">
 
         </TextView>
 
